@@ -118,7 +118,7 @@ section-titles: false
 
 ## Commits{.allowframebreaks}
 
-* A commit is a snapshot in a point in time
+* A commit is a snapshot in time
 * Each commit contains information about how files have changed in the repository
 * Also has a message and information about the contributor
 * Each commit forms a timeline representing the changes in the repository
@@ -128,7 +128,7 @@ section-titles: false
 
 ![](images/git-commit.png)
 
-## Branching
+## Branching {.allowframebreaks}
 
 * Each repository has a "trunk" branch (master or main)
 * Branching lets you work on different things at the same time 
@@ -136,6 +136,11 @@ section-titles: false
 * Branches can be joined back together, joining multiple peoples work together
 * Typically you merge your work branch into the trunk
 * `git checkout -b my-branch`
+
+\framebreak 
+
+![](images/branch-example.png)
+
 
 ## Merging
 
@@ -169,17 +174,35 @@ section-titles: false
 
 ## What is Github
 
+::: columns
+:::: column 
+
 * World's most popular Git server
 * Almost all major OSS is stored here 
 * Has free student plans for extra features 
-* Provides lots of extra services on top of just Git 
+* Provides lots of extra services on top of just Git
+
+::::
+:::: column
+
+![](images/octocat.png)
+
+::::
+:::
 
 # To Infinity and Beyond 
 
-## What is CI/CD
+## What is CI/CD 
 
 * In order to ship software succesffuly code needs to be built and tested 
 * Building and testing should be done automatically 
 * Allows you to make sure incoming changes are correct
 * Once code is built, tested, and merged it can be deployed 
 * Deployments are updates to the servers hosting your software 
+
+
+::: div
+
+\centering ![](images/ci-cd.png){ width=80% } 
+
+:::
