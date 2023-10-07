@@ -91,3 +91,7 @@
 * Once code is built, tested, and merged it can be deployed 
 * Deployments are updates to the servers hosting your software 
 
+https://ohshitgit.com/
+https://xosh.org/explain-git-in-simple-words/
+https://git-scm.com/book/en/v2
+https://missing.csail.mit.edu/2020/version-control/
