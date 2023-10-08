@@ -11,3 +11,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+// TODO
+// 1. Add pug
+// Change to rendering with pug
+// Create a basic page with pug image
+// Create routes with about
