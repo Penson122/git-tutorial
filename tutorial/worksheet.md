@@ -66,6 +66,8 @@ This will require having a laptop that is prepared for developement. You'll need
 
 ## Part One 
 
+Get you git environment set up so you can download repositories and view them in your editor. 
+
 ### Download this project
 
 Setup your environment locally by logging into GitHub and downloading this project. 
@@ -78,6 +80,9 @@ Setup your environment locally by logging into GitHub and downloading this proje
   * `Authenticate Git` - `Y` (Terminal User Interfaces will use Y for Yes and N for No when asking questions)
   * `Login with a web browser`
   * Copy code, press enter, paste code in browser, enter 2FA
+
+* `git config --global user.email you@youremail.com` - Configure your git identity for your author information
+* `git config --global user.name "Your Name"` 
 
 * `cd ~/code` - or wherever else you keep your code
 * `gh repo clone penson122/git-tutorial`
@@ -95,7 +100,7 @@ Setup your environment locally by logging into GitHub and downloading this proje
 
 ## Part Two 
 
-Node projects use dependencies from NPM 
+Install project dependencies and run this example project.
 
 ### Install Dependencies
 
@@ -229,6 +234,8 @@ app.listen(port, () => {
 
 ## Part Four 
 
+Update the service so it can be easily tested and write your first test. 
+
 ### Prepare for testing
 
 #### Install Test Dependencies
@@ -327,12 +334,6 @@ describe("Test the root path", () => {
 
 Configure Fly and deploy your first project
 
-* Don't commit your api tokens to any repository
-* This is very dangerous and can be very costly 
-* This code is on the public internet where anyone can read it 
-* Can copy your api tokens and use them for themselves and spend your money or worse host criminal services with your key
-* https://blog.gitguardian.com/secrets-credentials-api-git/
-
 ### FlyCtl Init 
 
 * `fly auth login`
@@ -350,6 +351,15 @@ Configure Fly and deploy your first project
   * You can only have 3 free VMs!
 
 ## Part Five 
+
+Configure CI/CD and automatically deploy to your cloud environment. 
+
+* Don't commit your api tokens to any repository
+* This is very dangerous and can be very costly 
+* This code is on the public internet where anyone can read it 
+* Can copy your api tokens and use them for themselves and spend your money or worse host criminal services with your key
+* https://blog.gitguardian.com/secrets-credentials-api-git/
+
 
 ### Add actions file
 
