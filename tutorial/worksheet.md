@@ -242,7 +242,7 @@ The `index.js` has both the routes and server listener coupled in the same file.
 * `mkdir routes`
 * create `routes/main.js`
 
-```
+```js
 const { Router } = require('express');
 
 const router = Router();
@@ -257,7 +257,7 @@ module.exports = router;
 
 * update index.js
 
-```
+```js
 const express = require('express');
 
 const router = require('./routes/main')
