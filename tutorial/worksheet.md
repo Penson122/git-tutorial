@@ -215,6 +215,7 @@ A linter is a code analysis tool which can inform you about errors, style or qua
     * `JavaScript`
     * `Install Now?` `Yes`
     * `npm`
+* `eslint-plugin-jest`
 
 *vscode config interlude*
 
@@ -240,6 +241,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: 'airbnb-base',
   overrides: [
@@ -254,13 +256,21 @@ module.exports = {
         sourceType: 'script',
       },
     },
+    {
+      files: ['**/*.test.js'],
+      plugins: ['jest'],
+      extends: ['plugin:jest/recommended'],
+      rules: { 'jest/prefer-expect-assertions': 'off' },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  ignorePatterns: ['**/*.test.js'],
   rules: {
   },
 };
+
 ```
 
 * `npm run lint` - Run linter and fix simple errors automatically
@@ -353,8 +363,9 @@ describe("Test the root path", () => {
     expect(response.statusCode).toBe(200);
     // Expects the response text to be "Hello, World!"
     expect(response.text).toBe("Hello, World!");
-    // Expects the response header content-type to be "text/html; charset=utf-8"
-    expect(response.headers["content-type"]).toBe("text/html; charset=utf-8");
+    // Expects content-type to be "text/html; charset=utf-8"
+    expect(response.headers["content-type"])
+        .toBe("text/html; charset=utf-8");
   });
 });
 ```
