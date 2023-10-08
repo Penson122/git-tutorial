@@ -412,7 +412,7 @@ Configure CI/CD and automatically deploy to your cloud environment.
 
 ### Add actions file
 
-* `Create .github/workflows/action.yaml`
+* `Create .github/workflows/cicd.yaml`
 * For more details on how this works - https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
 
 ```
@@ -454,6 +454,7 @@ jobs:
 
 * Commit your changes 
 * `git push`
+* Go to https://github.com/my/my-repo/actions to see the running job, it should finish with `status: Success` 
 
 ## Congratulations!
 
