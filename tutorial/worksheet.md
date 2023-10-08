@@ -111,6 +111,7 @@ Install project dependencies and run this example project.
 * `npm run start` - start the server 
   * `CTRL-C` - kill the server 
 * `npm run watch` - start the server in watch mode (auto reloads after code change)
+  * exit watch mode before running more commands
 
 ## Part Three 
 
@@ -170,6 +171,7 @@ app.listen(port, () => {
 * `git push` - push changes to remote 
 * `gh repo view --web` - Click on 2 Commits to see the timeline of changes to your project
 * `git log --oneline` - see that same history locally
+  * Type `q` to exit `less` mode
 * Remember the help and manual pages to see what else you can do
 
 ### Test It Locally
@@ -198,6 +200,8 @@ app.listen(port, () => {
 * `git push`
 
 ### Add Linter
+
+A linter is a code analysis tool which can inform you about errors, style or quality issues and potential bugs. They can be used to enforce code style and autocmatically fix some issues.
 
 * `npm init @eslint/config`
     * Install eslint if it asks
@@ -228,8 +232,39 @@ app.listen(port, () => {
   },
 ```
 
+* Update `.eslintrc`
+
+```
+module.exports = {
+  env: {
+    browser: true,
+    commonjs: true,
+    es2021: true,
+  },
+  extends: 'airbnb-base',
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [
+        '.eslintrc.{js,cjs}',
+      ],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  rules: {
+  },
+};
+```
+
 * `npm run lint` - Run linter and fix simple errors automatically
-  * Try deleting some semicolons and then running this common (or if you have configured fix on save, simply saving the file).
+  * Try deleting some semicolons and then running this command (or if you have configured fix on save, simply saving the file).
 * Commit your changes
 
 ## Part Four 
