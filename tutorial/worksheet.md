@@ -215,7 +215,7 @@ A linter is a code analysis tool which can inform you about errors, style or qua
     * `JavaScript`
     * `Install Now?` `Yes`
     * `npm`
-* `eslint-plugin-jest`
+* `npm install --save-dev eslint-plugin-jest`
 
 *vscode config interlude*
 
@@ -383,12 +383,15 @@ Configure Fly and deploy your first project
 ### FlyCtl Init 
 
 * `fly auth login`
-* `fly launch`
+* `fly launch --internal-port 8080`
   * Generate a name or choose something unique 
   * lhr
 
 ### Deploy
 
+* Update `Dockerfile`
+  * Look `EXPOSE` and some numbers, probably 3000 or 8080 or something like that.
+  * Add `ENV PORT=NUMBER` to the line below where `NUMBER` is same number as `EXPOSE`
 * `fly deploy`
   * Make sure you have docker installed
   * Follow the link at the end to see your server
